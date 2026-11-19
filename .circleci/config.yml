@@ -8,6 +8,7 @@ jobs:
         
     machine:
       image: ubuntu-2204:current
+    resource_class: arm.medium
     steps:
       - run:
           name: Pull and run Docker container
